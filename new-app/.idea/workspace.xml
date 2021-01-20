@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7d3cc10b-d666-446a-887d-eb3507e43ea1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/new-app.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/addMusicLogo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/addPictureLogo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/addTextLogo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/addVideoLogo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/cursor.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/downIcon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/email.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/facebook.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/herAvatar.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hesAvatar.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/instagram.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/likeIcon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/myAvatar.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/newLogoIt.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/phoneCall.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pinterest.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/telegram.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/twitter.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/youtube.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/UI/logoIT/LogoGoToIt.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/UI/logoIT/LogoGoToIt.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/UI/menuItem/MenuItem.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/UI/menuItem/MenuItem.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/UI/menuItemSubmenu/MenuItemSubmenu.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/UI/menuItemSubmenu/MenuItemSubmenu.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/UI/search/Search.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/UI/search/Search.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/User/content/follow/Follow.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/User/content/follow/Follow.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/User/content/images/Images.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/User/content/images/Images.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/User/content/music/Music.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/User/content/music/Music.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/User/content/news/News.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/User/content/news/News.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/User/content/profile/Profile.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/User/content/profile/Profile.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/User/content/projects/Projects.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/User/content/projects/Projects.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/User/content/settings/Settings.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/User/content/settings/Settings.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/User/content/videos/Videos.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/User/content/videos/Videos.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/User/content/wall/Wall.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/User/content/wall/Wall.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/User/content/wall/messages/Messages.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/User/content/wall/messages/Messages.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/User/content/wall/myPosts/MyPosts.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/User/content/wall/myPosts/MyPosts.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/User/content/wall/myPosts/post/Post.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/User/content/wall/myPosts/post/Post.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/User/content/wall/myPosts/post/comments/Comment.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/User/content/wall/myPosts/post/comments/Comment.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/User/content/wall/wallHeader/WallHeader.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/User/content/wall/wallHeader/WallHeader.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/User/footer/Footer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/User/footer/Footer.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/User/header/Header.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/User/header/Header.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/logo192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/logo512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1nKHpvyOnBXcjOviEMYV2NjuzNV" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/component/User/content/wall/messages" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\React\projects\SocialNetwork\new-app\src\component\User\content\wall\messages" />
+      <recent name="D:\React\projects\SocialNetwork\new-app\src\component\User\content\wall\myPosts" />
+      <recent name="D:\React\projects\SocialNetwork\new-app\src\component\User\content\wall\wallHeader" />
+      <recent name="D:\React\projects\SocialNetwork\new-app\src\component\User\content\wall" />
+      <recent name="D:\React\projects\SocialNetwork\new-app\src\component\User\content" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\React\projects\SocialNetwork\new-app\src\component" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7d3cc10b-d666-446a-887d-eb3507e43ea1" name="Default Changelist" comment="" />
+      <created>1611132080838</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1611132080838</updated>
+      <workItem from="1611132094152" duration="6877000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>

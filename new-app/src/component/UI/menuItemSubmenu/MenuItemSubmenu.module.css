@@ -1,0 +1,104 @@
+.collapse {
+    background: #455A64;
+}
+
+.collapse ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.collapse a {
+    text-decoration: none;
+    outline: none;
+    display: block;
+    transition: .4s ease-in-out;
+}
+
+
+.topmenu {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.topmenu > li {
+    display: inline-block;
+    position: relative;
+}
+
+.topmenu > li:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 1px;
+    height: 12px;
+    background: #d2d2d2;
+    top: 16px;
+    box-shadow: 4px -2px 0 #d2d2d2;
+    transform: rotate(30deg);
+}
+
+.topmenu > li:last-child:after {
+    background: none;
+    box-shadow: none;
+}
+
+.topmenu > li > a {
+    display: inline-flex;
+    padding: 12px 20px;
+    color: #212121;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-family: "Fira Code", sans-serif;
+}
+
+.topmenu li a:hover {
+    color: #757575;
+}
+
+.topmenu img {
+    width: 8px;
+    height: auto;
+    margin-left: 3px;
+}
+
+.topmenu > li:hover .submenu {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(0.9);
+}
+
+
+
+.submenu {
+    position: absolute;
+    left: 15%;
+    top: 100%;
+    width: 190px;
+    margin-left: -105px;
+    background: #cdf8dc;
+    border: 2px solid #bdbdbd;
+    z-index: 5;
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(.2);
+    transition: .4s ease-in-out;
+}
+
+.submenu li a {
+    padding: 10px 0;
+    margin: 0 10px;
+    border-bottom: 1px solid #bdbdbd;
+    font-size: 16px;
+    color: #757575;
+    font-family: "Fira Code", sans-serif;
+    transition: color 0s;
+}
+
+.submenu li a:hover {
+    color: #212121;
+    font-weight: bold;
+    transition: color 0s;
+
+}

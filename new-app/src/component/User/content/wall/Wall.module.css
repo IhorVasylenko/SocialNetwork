@@ -1,0 +1,10 @@
+/*Стили длч шапки*/
+.wrapper {
+    position: relative;
+    display: grid;
+    grid-template-rows: 110px 1fr;
+}
+
+
+
+

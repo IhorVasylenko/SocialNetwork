@@ -1,0 +1,40 @@
+.headerWrapper {
+    min-height: 50px;
+    margin-right: -10px;
+    margin-left: -10px;
+}
+
+.headerWrapper .navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+}
+
+.headerWrapper .menu {
+    display:flex;
+    background: #455A64;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 0;
+}
+
+.headerWrapper .container {
+    display: grid;
+    justify-items: end;
+    grid-template-columns: 2fr 3fr 7fr;
+    align-items: center;
+
+    max-width: 1050px;
+
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.container:last-child {
+    justify-self: start;
+}
+
+

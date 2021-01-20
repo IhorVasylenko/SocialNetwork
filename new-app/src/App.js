@@ -1,24 +1,34 @@
-import logo from './logo.svg';
+import React from "react";
 import './App.css';
+import {BrowserRouter} from "react-router-dom";
+
+import UserHeader from "./component/User/header/Header";
+import UserContentProfile from "./component/User/content/profile/Profile";
+import UserContentWall from "./component/User/content/wall/Wall";
+import Follow from "./component/User/content/follow/Follow";
+import UserFooter from "./component/User/footer/Footer";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <BrowserRouter>
+        <div className='pageContents'>
+          <div className='appWrapper'>
+            <UserHeader />
+            <div className='content'>
+              <div>
+                <UserContentProfile />
+              </div>
+              <div>
+                <UserContentWall />
+              </div>
+              <div>
+                <Follow />
+              </div>
+            </div>  {/*content*/}
+            <UserFooter />
+          </div>  {/*appWrapper*/}
+        </div>  {/*pageContents*/}
+      </BrowserRouter>
   );
 }
 
