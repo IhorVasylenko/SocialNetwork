@@ -5,7 +5,7 @@ const UserContentWallMyPostsPostComment = (props) => {
     return (
         <div className={s.wrapper}>
             <div className={s.comments}>
-                <img src='hesAvatar.jpg' alt=""/>
+                <img src='avatar2.jpg' alt=""/>
                 <p>
                     <a href="">Gandalf Gray</a>
                     Why is it that people who can't take advice always insist on giving it ?

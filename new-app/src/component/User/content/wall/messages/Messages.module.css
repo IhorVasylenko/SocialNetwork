@@ -1,3 +1,121 @@
+/*Общий контейнер*/
 .wrapper {
-    height: 700px;
+    display: grid;
+    grid-template-columns: 40% 60%;
+
+    background-color: #CFD8DC;
+    margin-top: 15px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.wrapper .dialogsWrapper {
+    width: 100%;
+    /*max-height: 500px;*/
+    border: none;
+}
+
+.wrapper .dialogsWrapper .dialogs {
+    height: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 0;
+    /*left: -12px;*/
+    /*margin-left: 12px;*/
+        padding: 0;
+}
+
+.wrapper .dialogsWrapper .dialogs .dialog {
+    width: 100%;
+    float: left;
+    position: relative;
+    display: block;
+}
+
+.wrapper .dialogsWrapper .dialogs .dialog a {
+    /*border: none;*/
+    /*padding: 10px 0;*/
+    /*border-bottom: 1px solid #f1f2f2 !important;*/
+    /*color: #555;*/
+    /*cursor: default;*/
+    /*background-color: #fff;*/
+    /*margin-right: 2px;*/
+    /*line-height: 1.42857143;*/
+    /*position: relative;*/
+    /*!*display: block;*!*/
+    outline: none;
+    text-decoration: none;
+}
+
+.wrapper .dialogsWrapper .dialogs .dialog a, a:active, a:focus {
+    outline: none;
+}
+
+.wrapper .dialogsWrapper .dialogs .dialog .contact {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    /*margin-left: 10px;*/
+    /*margin-right: 10px;*/
+}
+
+.wrapper .dialogsWrapper .dialogs .dialog .contact img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.wrapper .dialogsWrapper .dialogs .dialog .contact .preview {
+    margin-left: 10px;
+    /*margin-left: 50px;*/
+}
+
+.wrapper .dialogsWrapper .dialogs .dialog .contact h6 {
+    font-size: 14px;
+    color: #61dafb;
+}
+
+.wrapper .dialogsWrapper .dialogs .dialog .contact p {
+    font-size: 10px;
+    color: red;
+}
+
+.wrapper .dialogsWrapper .dialogs .dialog .contact small {
+    font-size: 6px;
+    color: green;
+}
+
+.wrapper .dialogsWrapper .dialogs .dialog .contact .seen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 30px;
+    height: 30px;
+
+    font-size: 18px;
+    font-weight: bold;
+    color: #CFD8DC;
+    background-color: #455A64;
+    border-radius: 5px;
+}
+
+.wrapper .dialogsWrapper .dialogs .dialog .contact .seen img {
+    width: 15px;
+    height: 15px;
+    background-color: #CFD8DC;
+}
+
+
+
+.wrapper .messagesWrapper {
+    width: 100%;
+}
+
+.wrapper .messagesWrapper .messages .message {
+    margin-bottom: 20px;
+}
+
+
+.wrapper .dialogsWrapper .scroll {
+
 }

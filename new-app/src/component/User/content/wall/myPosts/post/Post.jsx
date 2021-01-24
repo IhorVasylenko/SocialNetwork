@@ -12,7 +12,7 @@ const UserContentWallMyPostsPost = (props) => {
             </div>
             <div className={s.post}>
                 <div className={s.header}>
-                    <img src="herAvatar.jpg" alt=""/>
+                    <img src="avatar1.jpg" alt=""/>
                     <div className={s.postInformations}>
                         <div className={s.authorName}>
                             <a href="">Zhanneta Kitty</a>

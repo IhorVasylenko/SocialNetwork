@@ -1,6 +1,5 @@
 import React from "react";
 import './App.css';
-import {BrowserRouter} from "react-router-dom";
 
 import UserHeader from "./component/User/header/Header";
 import UserContentProfile from "./component/User/content/profile/Profile";
@@ -10,7 +9,6 @@ import UserFooter from "./component/User/footer/Footer";
 
 function App() {
   return (
-      <BrowserRouter>
         <div className='pageContents'>
           <div className='appWrapper'>
             <UserHeader />
@@ -27,8 +25,7 @@ function App() {
             </div>  {/*content*/}
             <UserFooter />
           </div>  {/*appWrapper*/}
-        </div>  {/*pageContents*/}
-      </BrowserRouter>
+        </div>  //{/*pageContents*/}
   );
 }
 

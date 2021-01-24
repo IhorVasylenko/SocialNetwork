@@ -1,10 +1,9 @@
 import React from "react";
 import s from './Profile.module.css';
-import {BrowserRouter, NavLink} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 
 const UserContentProfile = (props) => {
     return (
-        <BrowserRouter>
             <nav>
                 <div className={s.item}>
                     <NavLink to='/myPosts' activeClassName={s.activeLink}>MyPosts</NavLink>
@@ -31,7 +30,6 @@ const UserContentProfile = (props) => {
                     <a href='/settings' activeClassName={s.activeLink}>settings</a>
                 </div>
             </nav>
-        </BrowserRouter>
     )
 }
 
