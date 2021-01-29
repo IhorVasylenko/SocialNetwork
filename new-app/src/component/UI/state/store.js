@@ -1,4 +1,12 @@
 import React from "react";
+import postReducer from "./postReducer";
+import messageReducer from "./messageReducer";
+
+/*const ADD_POST = 'ADD-POST';
+const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
+const ADD_NEW_COMMENT = 'ADD-NEW-COMMENT';
+const UPDATE_NEW_COMMENT_TEXT = 'UPDATE-NEW-COMMENT-TEXT';
+const ADD_NEW_MESSAGE = 'ADD-NEW-MESSAGE';*/
 
 let store = {
     _state: {
@@ -75,12 +83,17 @@ let store = {
             ]
         }
     },
+    _callSubscriber() {
+    },
+
     getState() {
         return this._state;
     },
-    _callSubscriber() {
+    subscribe(observer) {
+        this._callSubscriber = observer;
     },
-    addNewPost() {
+
+    /*addNewPost() {
         let newPost = {
             id: 4,
             name: 'Lúthien Tinuviel',
@@ -98,17 +111,6 @@ let store = {
         this._state.postsPage.newPostText = newText;
         this._callSubscriber(this._state);
     },
-    addNewMessage(messageData) {
-        let newMessage = {
-            id: 11,
-            name: 'Mirime',
-            avatar: '/myAvatar.jpg',
-            passed: '3 hour ago',
-            message: messageData
-        };
-        this._state.messagesPage.myMessagesData.push(newMessage);
-        this._callSubscriber(this._state);
-    },
     addNewComment() {
         let newComment = {
             id: 6,
@@ -124,11 +126,100 @@ let store = {
         this._state.postsPage.newCommentText = newText;
         this._callSubscriber(this._state);
     },
-    subscribe(observer) {
-        this._callSubscriber = observer;
+    addNewMessage(messageData) {
+        let newMessage = {
+            id: 11,
+            name: 'Mirime',
+            avatar: '/myAvatar.jpg',
+            passed: '3 hour ago',
+            message: messageData
+        };
+        this._state.messagesPage.myMessagesData.push(newMessage);
+        this._callSubscriber(this._state);
+    },*/
+    dispatch(action) {
+
+        this._state.postsPage = postReducer(this._state.postsPage, action);
+        this._state.messagesPage = messageReducer(this._state.messagesPage, action);
+
+        this._callSubscriber(this._state);
+
+        /*if (action.type === 'ADD-POST') {
+            let newPost = {
+                id: 4,
+                name: 'Lúthien Tinuviel',
+                avatar: '/avatar4.jpg',
+                passed: 'a day ago',
+                likesCount: 3,
+                text: this._state.postsPage.newPostText,
+                media: <img src="https://www.guinnessworldrecords.com/Images/Deadpool%20article%20main_tcm25-19980.jpg" alt=""/>
+            };
+            this._state.postsPage.PostData.push(newPost);
+            this._state.postsPage.newPostText = '';
+            this._callSubscriber(this._state);
+        } else if (action.type === 'UPDATE-NEW-POST-TEXT') {
+            this._state.postsPage.newPostText = action.newText;
+            this._callSubscriber(this._state);
+        } else if (action.type === 'ADD-NEW-COMMENT') {
+            let newComment = {
+                id: 6,
+                avatar: 'myAvatar.jpg',
+                name: 'Mirime',
+                text: this._state.postsPage.newCommentText
+            };
+            this._state.postsPage.commentsData.push(newComment);
+            this._state.postsPage.newCommentText = '';
+            this._callSubscriber(this._state);
+        } else if (action.type === 'UPDATE-NEW-COMMENT-TEXT') {
+            this._state.postsPage.newCommentText = action.newText;
+            this._callSubscriber(this._state);
+        } else if (action.type === 'ADD-NEW-MESSAGE') {
+            let newMessage = {
+                id: 11,
+                name: 'Mirime',
+                avatar: '/myAvatar.jpg',
+                passed: '3 hour ago',
+                message: action.messageData
+            };
+            this._state.messagesPage.myMessagesData.push(newMessage);
+            this._callSubscriber(this._state);
+        }*/
+    }
+
+}
+
+/*export const addPostActionCreator = () => {
+    return {
+        type: ADD_POST
     }
 }
 
+export const updateNewPostActionCreator = (text) => {
+    return {
+        type: UPDATE_NEW_POST_TEXT,
+        newText: text
+    }
+}
+
+export const addCommentActionCreator = () => {
+    return {
+        type: ADD_NEW_COMMENT
+    }
+}
+
+export const updateCommentActionCreator = (text) => {
+    return {
+        type: UPDATE_NEW_COMMENT_TEXT,
+        newText: text
+    }
+}
+
+export const addNewMessage = (text) => {
+    return {
+        type: ADD_NEW_MESSAGE,
+        messageData: text
+    }
+}*/
 
 export default store
 window.store = store
