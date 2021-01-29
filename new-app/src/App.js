@@ -7,7 +7,8 @@ import UserContentWall from "./component/User/content/wall/Wall";
 import Follow from "./component/User/content/follow/Follow";
 import UserFooter from "./component/User/footer/Footer";
 
-function App() {
+function App(props) {
+
   return (
         <div className='pageContents'>
           <div className='appWrapper'>
@@ -17,7 +18,10 @@ function App() {
                 <UserContentProfile />
               </div>
               <div>
-                <UserContentWall />
+                <UserContentWall state={props.state} addNewPost={props.addNewPost}
+                                 addNewMessage={props.addNewMessage} addNewComment={props.addNewComment}
+                                 updateNewPostText={props.updateNewPostText}
+                                 updateNewCommentText={props.updateNewCommentText}/>
               </div>
               <div>
                 <Follow />

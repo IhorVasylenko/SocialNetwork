@@ -1,16 +1,28 @@
 import React from "react";
-import s from './Post.module.css';
-
-import UserContentWallMyPostsPostComment from "./comments/Comment";
-impo
+import s from './PostElement.module.css';
+import UserContentWallMyPostsPostComment from "../comments/Comment";
 
 const PostItem = (props) => {
+    let newComment = React.createRef();
+
+    let addComment = () => {
+        props.addNewComment();
+    }
+
+    let onCommentChange = () => {
+        let text = newComment.current.value;
+        props.updateNewCommentText(text);
+    }
+
     return <div className={s.post}>
-        <div className={s.header}>
+        <div className={s.addedMedia}>{props.media}</div>
+        <div className={s.header}   >
             <img src={process.env.PUBLIC_URL + props.avatar} alt=""/>
             <div className={s.postInformations}>
                 <div className={s.authorName}>
-                    <a href="">{props.name}</a>
+                    <a href="#">
+                        {props.name}
+                    </a>
                 </div>
                 <div className={s.publicationDate}>
                     {props.passed}.
@@ -18,7 +30,7 @@ const PostItem = (props) => {
             </div>
             <span className={s.likes}> {/*Иконка для лайков.*/}
                 <div>
-                    <img src="likeIcon.png" alt=""/>
+                    <img src={process.env.PUBLIC_URL + "./likeIcon.png"} alt=""/>
                         </div>
                         <div className={s.likesCount}>
                             {props.likesCount}
@@ -28,15 +40,14 @@ const PostItem = (props) => {
         <div className={s.text}>
             {props.text}
         </div>
-        <UserContentWallMyPostsPostComment />
+        <UserContentWallMyPostsPostComment commentsData={props.commentsData} />
         <div className={s.addMyComent}>
-            <img src="myAvatar.jpg" alt=""/>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Add comment..."></textarea>
+            <img src={process.env.PUBLIC_URL + "./myAvatar.jpg"} alt=""/>
+            <textarea name="" ref={newComment} id="" cols="30" rows="10" onChange={onCommentChange} value={props.newCommentText} placeholder="Add comment..." />
+            <button onClick={addComment}>Add</button>
         </div>
     </div>
 }
-
-
 
 const MediaItem = (props) => {
     return <div className={s.addedMedia}>
@@ -45,37 +56,7 @@ const MediaItem = (props) => {
     </div>
 }
 
-
-
-
-const ItemPost = (props) => {
-    return <div className={s.wrapper}>
-        <div>
-            {props.media}
-            {props.post}
-        </div>
-    </div>
+export {
+    PostItem,
+    MediaItem,
 }
-
-
-const UserContentWallMyPostsPost = (props) => {
-    let postElement = PostData.map( p => <PostItem id={p.id} name={p.name} avatar={p.avatar} passed={p.passed}
-                                                   text={p.text} likesCount={p.likesCount} />);
-
-    let mediaElement = MediaData.map( m => <MediaItem id={m.id} media={m.media} />)
-
-    let dataPost = [
-        {media: mediaElement[0], post: postElement[0]},
-        {media: mediaElement[1], post: postElement[1]},
-        {media: mediaElement[2], post: postElement[2]}
-    ]
-    let elementPost = dataPost.map( e => <ItemPost media={e.media} post={e.post} />)
-
-    return (
-        <div>
-            {elementPost}
-        </div>
-    )
-}
-
-export default UserContentWallMyPostsPost

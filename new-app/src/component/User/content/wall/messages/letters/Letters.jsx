@@ -1,8 +1,6 @@
 import React from "react";
 import s from './Letters.module.css';
 
-
-
 const ContactMessages = (props) => {
 
     return <div className={s.contactMessages}>

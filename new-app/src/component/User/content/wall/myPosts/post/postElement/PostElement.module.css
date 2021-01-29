@@ -1,23 +1,16 @@
-.wrapper {
-    width: 577.5px;
-    margin-top: 15px;
-    background-color: #CFD8DC;
-    color: #757575;
-    margin-bottom: 15px;
+.addedMedia {
+
 }
 
-.wrapper .addedMedia {
-    margin-bottom: -10px;
-}
-
-.wrapper .addedMedia img{
+.addedMedia img{
     max-width: 100%;
 }
 
-.wrapper .post {
+.post {
     padding-top: 10px;
     padding-left: 10px;
     padding-right: 10px;
+    border-bottom: 15px solid #607D8B;
 }
 
 .post .header {
@@ -76,6 +69,8 @@
 }
 
 .post .text {
+    flex-wrap: wrap;
+    word-wrap:break-word;
     position: relative;
     margin-left: 65px;
     padding-top: 10px;
@@ -83,6 +78,11 @@
     line-height: 2;
     border-top: 1px solid #bdbdbd;
     border-bottom: 1px solid #bdbdbd;
+}
+
+.post .addMyComent {
+    display: inline-flex;
+    align-items: center;
 }
 
 .post .addMyComent img{
@@ -98,11 +98,34 @@
     outline: none;
     resize: none;
     height: 15px;
-    width: 402px;
+    width: 365px;
     border-radius: 7px;
     padding-left: 10px;
+
 
     background-color: #CFD8DC;
     font-family: "Fira Code", sans-serif;
     color: #757575;
+}
+
+.post .addMyComent button {
+    width: 37px;
+    height: 21px;
+
+    border-radius: 7px;
+    border: none;
+
+    color: #cfd8dc;
+    background-color: #465A64;
+    font-size: 14px;
+
+    font-family: "Fira Code", sans-serif;;
+}
+
+.post .addMyComent button:active {
+    font-weight: bold;
+}
+
+.post .addMyComent  button:active, button:focus {
+    outline: none;
 }

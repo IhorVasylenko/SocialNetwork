@@ -2,25 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7d3cc10b-d666-446a-887d-eb3507e43ea1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/avatar1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/avatar2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/avatar3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/avatar4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/avatar5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/checkIcon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/shareIcon.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/herAvatar.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/hesAvatar.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/User/content/profile/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/User/content/profile/Profile.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/UI/menuItemSubmenu/MenuItemSubmenu.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/UI/menuItemSubmenu/MenuItemSubmenu.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/UI/search/Search.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/UI/search/Search.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/UI/state/State.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/UI/state/State.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/User/content/follow/Follow.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/User/content/follow/Follow.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/User/content/wall/Wall.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/User/content/wall/Wall.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/User/content/wall/messages/Messages.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/User/content/wall/messages/Messages.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/User/content/wall/messages/Messages.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/User/content/wall/messages/Messages.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/User/content/wall/messages/dialogs/Dialogs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/User/content/wall/messages/dialogs/Dialogs.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/User/content/wall/messages/letters/Letters.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/User/content/wall/messages/letters/Letters.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/User/content/wall/messages/letters/Letters.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/User/content/wall/messages/letters/Letters.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/User/content/wall/myPosts/MyPosts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/User/content/wall/myPosts/MyPosts.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/User/content/wall/myPosts/post/Post.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/User/content/wall/myPosts/post/Post.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/User/content/wall/myPosts/post/Post.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/User/content/wall/myPosts/post/Post.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/User/content/wall/myPosts/post/comments/Comment.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/User/content/wall/myPosts/post/comments/Comment.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/User/content/wall/myPosts/post/comments/Comment.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/User/content/wall/myPosts/post/comments/Comment.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/User/content/wall/myPosts/post/postElement/PostElement.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/User/content/wall/myPosts/post/postElement/PostElement.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/User/content/wall/myPosts/post/postElement/PostElement.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/User/content/wall/myPosts/post/postElement/PostElement.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/User/content/wall/wallHeader/WallHeader.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/User/content/wall/wallHeader/WallHeader.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -32,6 +34,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -53,7 +56,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.linters.configure.manually.selectedeslint" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/component/User/content/wall/messages" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/component/User/content/wall/myPosts/post/postElement" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -62,16 +65,16 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="settings.javascript.linters.eslint" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\React\projects\SocialNetwork\new-app\src\component\User\content\wall\myPosts\post\postElement" />
+      <recent name="D:\React\projects\SocialNetwork\new-app\src\component\User\content\wall\messages\letters" />
+      <recent name="D:\React\projects\SocialNetwork\new-app\src\component\User\content\wall\messages\dilogs" />
       <recent name="D:\React\projects\SocialNetwork\new-app\src\component\User\content\wall\messages" />
       <recent name="D:\React\projects\SocialNetwork\new-app\src\component\User\content\wall\myPosts" />
-      <recent name="D:\React\projects\SocialNetwork\new-app\src\component\User\content\wall\wallHeader" />
-      <recent name="D:\React\projects\SocialNetwork\new-app\src\component\User\content\wall" />
-      <recent name="D:\React\projects\SocialNetwork\new-app\src\component\User\content" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\React\projects\SocialNetwork\new-app\src\component" />
@@ -92,7 +95,12 @@
       <workItem from="1611261254619" duration="389000" />
       <workItem from="1611261796450" duration="1104000" />
       <workItem from="1611264914969" duration="17503000" />
-      <workItem from="1611478433380" duration="609000" />
+      <workItem from="1611478433380" duration="872000" />
+      <workItem from="1611509799923" duration="13109000" />
+      <workItem from="1611558632971" duration="41401000" />
+      <workItem from="1611738360887" duration="20504000" />
+      <workItem from="1611825573831" duration="16667000" />
+      <workItem from="1611903502421" duration="585000" />
     </task>
     <servers />
   </component>

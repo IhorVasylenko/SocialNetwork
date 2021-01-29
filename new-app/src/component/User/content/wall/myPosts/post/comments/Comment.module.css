@@ -1,6 +1,10 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
 .comments {
     display: inline-flex;
-
 }
 
 .comments img{
@@ -11,8 +15,14 @@
     margin-top: 5px;
 }
 
-.comments p {
+.comments .text {
+
     margin-left: 10px;
+}
+
+.comments .text .wrap {
+    flex-wrap: wrap;
+    word-wrap:anywhere;
 }
 
 .comments a {
