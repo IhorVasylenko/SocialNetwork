@@ -1,14 +1,19 @@
 import React from "react";
 import UserContentWallMyPostsPost from "./post/Post";
-import UserContentWall from "../Wall";
+import UserContentWallWallHeader from "../wallHeader/WallHeader";
+import s from './MyPosts.module.css'
+import Follow from "../../follow/Follow";
 
 const UserContentWallMYPosts = (props) => {
 
     return (
-        <div>
-            <UserContentWallMyPostsPost commentsData={props.state.commentsData} PostData={props.state.PostData}
-                                        newCommentText={props.state.newCommentText} addNewComment={props.addNewComment}
-                                        updateNewCommentText={props.updateNewCommentText}/>
+        <div className={s.wrapper}>
+            <UserContentWallWallHeader addPost={props.addPost} updateNewPost={props.updateNewPost} newPostText={props.newPostText} />
+            <UserContentWallMyPostsPost commentsData={props.commentsData} PostData={props.PostData} newCommentText={props.newCommentText}
+                                        addComment={props.addComment} updateComment={props.updateComment} />
+            <div className={s.follow}>
+                <Follow />
+            </div>
         </div>
     )
 }

@@ -5,13 +5,13 @@ import UserContentWallMyPostsPostComment from "../comments/Comment";
 const PostItem = (props) => {
     let newComment = React.createRef();
 
-    let addComment = () => {
-        props.addNewComment();
+    let onAddComment = () => {
+        props.addComment();
     }
 
     let onCommentChange = () => {
         let text = newComment.current.value;
-        props.updateNewCommentText(text);
+        props.updateComment(text);
     }
 
     return <div className={s.post}>
@@ -44,7 +44,7 @@ const PostItem = (props) => {
         <div className={s.addMyComent}>
             <img src={process.env.PUBLIC_URL + "./myAvatar.jpg"} alt=""/>
             <textarea name="" ref={newComment} id="" cols="30" rows="10" onChange={onCommentChange} value={props.newCommentText} placeholder="Add comment..." />
-            <button onClick={addComment}>Add</button>
+            <button onClick={onAddComment}>Add</button>
         </div>
     </div>
 }

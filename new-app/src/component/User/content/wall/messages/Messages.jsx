@@ -4,32 +4,21 @@ import DialogItem from './dialogs/Dialogs';
 import {ContactMessages, MyMessages} from "./letters/Letters";
 
 const UserContentWallMessages = (props) => {
-    let dialogsElements = props.state.dialogsData.map(d =>
+
+    let dialogsElements = props.dialogsData.map(d =>
         <DialogItem id={d.id} name={d.name} avatar={d.avatar} passed={d.passed} seen={d.seen} />);
 
-    let contactMessagesElements = props.state.cntactMessagesData.map(c =>
+    let contactMessagesElements = props.cntactMessagesData.map(c =>
         <ContactMessages id={c.id} name={c.name} avatar={c.avatar} passed={c.passed} message={c.message}/>);
 
-    let myMessagesElements = props.state.myMessagesData.map(m =>
+    let myMessagesElements = props.myMessagesData.map(m =>
         <MyMessages id={m.id} name={m.name} avatar={m.avatar} passed={m.passed} message={m.message}/>);
 
-    /*let messagesItems = [
-        contactMessagesElements[0],
-        myMessagesElements[0],
-        myMessagesElements[1],
-        contactMessagesElements[1],
-        myMessagesElements[2],
-        contactMessagesElements[2],
-        contactMessagesElements[3],
-        myMessagesElements[3],
-        contactMessagesElements[4],
-        myMessagesElements[4]
-    ];*/
-
     let newMessage = React.createRef ();
-    let addMessage = () => {
+
+    let onAddMessage = () => {
         let text = newMessage.current.value;
-        props.addNewMessage(text);
+        props.addMessage(text);
         newMessage.current.value = '';
     }
 
@@ -42,15 +31,14 @@ const UserContentWallMessages = (props) => {
             </div>
             <div className={s.scrollWrapper}>
                 <div className={s.messagesWrapper}>
-                    {/*{messagesItems}*/}
                     {contactMessagesElements}
                     {myMessagesElements}
                 </div>
             </div>
             <div className={s.addMessageWrapper}>
+                <button onClick={onAddMessage}>Add message</button>
                 <textarea className={s.formControl} name="" ref={newMessage}
                           id="" cols="30" rows="3" placeholder={'What do you want to write?'} />
-                <button onClick={addMessage}>Add message</button>
             </div>
         </div>
     )

@@ -2,23 +2,21 @@
 .wrapper {
     display: grid;
     grid-template-columns: 40% 60%;
-    grid-template-rows: 480px 70px;
-    grid-template-areas: 'd m' 'a a' ;
+    grid-template-rows: 435px 50px;
+    grid-template-areas: 'd m' 'd a' ;
 
     background-color: #CFD8DC;
-    margin-top: 15px;
-    margin-bottom: 15px;
-
-
+    margin-top: 10px;
+    margin-bottom: 5px;
 }
 
 /*Стили для контактов*/
 .wrapper .dialogsWrapper {
     grid-area: d;
     width: 100%;
-    height: 480px;
+    height: 475px;
+    border-top: 5px solid #CFD8DC;
 
-    border: none;
 
     overflow-y: scroll;
 }
@@ -60,7 +58,8 @@
     grid-area: m;
     width: 100%;
     border: none;
-    height: 480px;
+    height: 425px;
+    border-top: 5px solid #CFD8DC;
     overflow-y: scroll;
 }
 
@@ -94,15 +93,14 @@
 }
 
 .addMessageWrapper .formControl {
-    height: 38px;
-    width: 247px;
+    height: 36px;
+    width: 365px;
     font-size: 16px;
     font-style: italic;
     font-weight: bold;
     background-color: #cfd8dc;
     color: #455A64;
     border: none;
-    border-radius: 5px;
     padding-left: 15px;
     outline: none;
     resize: none;
@@ -115,8 +113,8 @@ textarea::placeholder {
 
 .addMessageWrapper button {
     width: 80px;
-    height: 42px;
-    border-radius: 5px;
+    height: 40px;
+    border-bottom-right-radius: 10px;
     border: none;
 
     color: #cfd8dc;

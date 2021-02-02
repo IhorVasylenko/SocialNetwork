@@ -1,19 +1,16 @@
 import React from 'react';
 import './index.css';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from "react-router-dom";
-import store from "./component/UI/state/State";
+import store from "./component/UI/state/reduxStore";
 
 let rerenderEntireTree = (state) => {
     ReactDOM.render(
         <React.StrictMode>
             <BrowserRouter>
-                <App state={state} addNewPost={store.addNewPost.bind(store)} addNewMessage={store.addNewMessage.bind(store)}
-                     addNewComment={store.addNewComment.bind(store)} updateNewPostText={store.updateNewPostText.bind(store)}
-                     updateNewCommentText={store.updateNewCommentText.bind(store)}/>
+                <App state={state} dispatch={store.dispatch.bind(store)} store={store} />
             </BrowserRouter>
         </React.StrictMode>,
         document.getElementById('root')
@@ -23,4 +20,7 @@ let rerenderEntireTree = (state) => {
 
 rerenderEntireTree(store.getState());
 
-store.subscribe(rerenderEntireTree);
+store.subscribe( () => {
+    let state = store.getState();
+    rerenderEntireTree(state);
+});

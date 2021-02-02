@@ -1,40 +1,4 @@
-.wrapper {
-    background-color: #cfd8dc;
-    display: flex;
-    flex-direction: column;
-    flex-flow: wrap;
-    justify-content: space-around;
-    align-items: flex-start;
-    padding-left: 2px;
-    padding-right: 2px;
-    width: 787px;
-    height: 490px;
-    overflow-y: scroll;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
-::-webkit-scrollbar {
-    width: 8px;
-}
-::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px #cfd8dc;
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-::-webkit-scrollbar-thumb {
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    background: #bdbdbd;
-    -webkit-box-shadow: inset 0 0 6px #757575;
-}
-::-webkit-scrollbar-thumb:window-inactive {
-    background: #cfd8dc;
-}
-
-.wrapper .informations {
+.informations {
     background: #cfd8dc;
     color: #212121;
     font-family: "Fira Code", sans-serif;
@@ -42,13 +6,14 @@
     font-weight: bold;
     max-width: 220px;
     line-height: 1;
-    height: 29px;
+    max-height: 29px;
     overflow: hidden;
     padding-left: 8px;
     padding-right: 8px;
+
 }
 
-.wrapper .element {
+.element {
     margin: 10px 0;
     display: inline-block;
     overflow: hidden;
@@ -60,7 +25,7 @@
     border-radius: 10px;
 }
 
-.wrapper .element img {
+.element img {
     width: auto;
     max-width: 220px;
     height: 150px;
@@ -71,12 +36,12 @@
     border-radius: 10px;
 }
 
-.wrapper .element:hover img {
+.element:hover img {
     transform: scale(1.1);
     opacity: .5;
 }
 
-.wrapper .element .shirt {
+.element .shirt {
     position: absolute;
     left:0;
     bottom:0;
@@ -86,7 +51,7 @@
     padding: 10px;
 }
 
-.wrapper .element .shirtWrapper {
+.element .shirtWrapper {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -94,11 +59,11 @@
     height: 132px;
 }
 
-.wrapper .element:hover .shirt{
+.element:hover .shirt{
     display:block;
 }
 
-.wrapper .element .shirt .header {
+.element .shirt .header {
     display: inline-flex;
     border-radius: 10px;
     height: 30px;
@@ -106,7 +71,7 @@
     justify-content: center;
 }
 
-.wrapper .element .shirt .headerLeft {
+.element .shirt .headerLeft {
     background-color: #cfd8dc;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
@@ -115,7 +80,7 @@
     opacity: .8;
 }
 
-.wrapper .element .shirt .headerRight {
+.element .shirt .headerRight {
     background-color: #795548;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -124,27 +89,29 @@
     opacity: .8;
 }
 
-.wrapper .element .shirt .header a {
+.element .shirt .header a {
     text-decoration: none;
     outline: none;
 }
-.wrapper .element .shirt .headerLeft a {
+
+.element .shirt .headerLeft a {
     font-family: "Fira Code", sans-serif;
     font-size: 12px;
     color: #795548;
 }
-.wrapper .element .shirt .headerRight a {
+
+.element .shirt .headerRight a {
     font-family: "Fira Code", sans-serif;
     font-size: 12px;
     color: #cfd8dc;
 }
 
-.wrapper .element .shirt .footer {
+.element .shirt .footer {
     display: inline-flex;
     justify-content: space-between;
 }
 
-.wrapper .element .shirt .footerLeft {
+.element .shirt .footerLeft {
     background-color: #cfd8dc;
     text-decoration: none;
     font-size: 12px;
@@ -157,15 +124,16 @@
     border-radius: 8px;
     max-width: 120px;
 }
-.wrapper .element .shirt .footerRight {
+
+.element .shirt .footerRight {
     display: inline-flex;
 }
 
-.wrapper .element .shirt .footerRight a {
+.element .shirt .footerRight a {
     outline: none;
 }
 
-.wrapper .element .shirt .footerRight img {
+.element .shirt .footerRight img {
     width: 20px;
     height: 20px;
     opacity: 0.8;
@@ -175,7 +143,8 @@
     border-color: transparent;
 }
 
-.wrapper .author {
+.author {
+    margin-top: 5px;
     display: inline-flex;
     padding-left: 20px;
     text-decoration: none;
@@ -184,7 +153,7 @@
     font-family: "Fira Code", sans-serif;
 }
 
-.wrapper .author .avatar img {
+.author .avatar img {
     height: 40px;
     width: 40px;
     border-radius: 50%;

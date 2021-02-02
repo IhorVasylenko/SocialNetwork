@@ -1,42 +1,25 @@
 import React from "react";
-import s from './Images.module.css';
-import UserContentWallImagesItem from "./imageItem/ImagesItem";
 import {addImageCreator, updateNewImageCreator} from "../../../UI/state/imageReducer";
+import UserContentWallImages from "./Images";
 
 
 
-const UserContentWallImages = (props) => {
-    let newImage = React.createRef();
+const UserContentWallImagesContainer = (props) => {
+    let state = props.store.getState();
 
     let addImage = () => {
-        props.dispatch ( addImageCreator() );
+        props.store.dispatch ( addImageCreator() );
     }
 
-    let onImageChange = () => {
-        let text = newImage.current.value;
-        props.dispatch ( updateNewImageCreator(text) );
+    let updateNewImageText = (text) => {
+        props.store.dispatch ( updateNewImageCreator(text) );
     }
-
-    let imageElement = props.state.imagesData.map ( i => <UserContentWallImagesItem id={i.id} image={i.image}
-        folder={i.folder} url={i.url} informations={i.informations} avatar={i.avatar} name={i.name} /> )
 
     return (
-        <div className={s.pageWrapper}>
-            <div className={s.buttonWrapper}>
-                <button onClick={addImage}>
-                    <img src='addIcon.png' alt=""/>
-                </button>
-                <textarea ref={newImage} onChange={onImageChange} value={props.state.newImageText}
-                          placeholder={'What would you like to describe ..?'}></textarea>
-                <button onClick={addImage}>
-                    <img src='addIcon.png' alt=""/>
-                </button>
-            </div>
-            <div className={s.wrapperImageElement}>
-                {imageElement}
-            </div>
-        </div>
+        <UserContentWallImages
+            updateNewImageText={updateNewImageText} addImage={addImage}
+            imagesData={state.imagePage.imagesData} newImageText={state.imagePage.newImageText}/>
     )
 }
 
-export default UserContentWallImages
+export default UserContentWallImagesContainer

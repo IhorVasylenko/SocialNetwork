@@ -1,21 +1,35 @@
 import React from "react";
-import UserContentWallMyPostsPost from "./post/Post";
-import UserContentWallWallHeader from "../wallHeader/WallHeader";
-import s from './MyPosts.module.css'
-import Follow from "../../follow/Follow";
+import UserContentWallMYPosts from "./MyPosts";
+import {
+    addCommentActionCreator,
+    addPostActionCreator, updateCommentActionCreator,
+    updateNewPostActionCreator
+} from "../../../../UI/state/postReducer";
 
-const UserContentWallMYPosts = (props) => {
+const UserContentWallMYPostsContainer = (props) => {
+    let state=props.store.getState();
+
+    let addPost = () => {
+        props.store.dispatch( addPostActionCreator() );
+    };
+    let updateNewPost = (text) => {
+        props.store.dispatch( updateNewPostActionCreator(text) );
+    };
+
+    let addComment = () => {
+        props.store.dispatch( addCommentActionCreator() );
+    }
+
+    let updateComment = (text) => {
+        props.store.dispatch( updateCommentActionCreator(text) );
+    }
 
     return (
-        <div className={s.wrapper}>
-            <UserContentWallWallHeader dispatch={props.dispatch} newPostText={props.state.newPostText} />
-            <UserContentWallMyPostsPost commentsData={props.state.commentsData} PostData={props.state.PostData}
-                                        newCommentText={props.state.newCommentText} dispatch={props.dispatch} />
-            <div className={s.follow}>
-                <Follow />
-            </div>
-        </div>
+        <UserContentWallMYPosts
+            newPostText={state.postPage.newPostText}  addPost={addPost} updateNewPost={updateNewPost}
+            commentsData={state.postPage.commentsData} PostData={state.postPage.PostData} newCommentText={state.postPage.newCommentText}
+            addComment={addComment} updateComment={updateComment} />
     )
 }
 
-export default UserContentWallMYPosts
+export default UserContentWallMYPostsContainer

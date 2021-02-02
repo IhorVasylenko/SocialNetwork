@@ -12,6 +12,9 @@ const UserContentProfile = (props) => {
                     <NavLink to='/messages' activeClassName={s.activeLink}>Messages</NavLink>
                 </div>
                 <div className={s.item}>
+                    <NavLink to='/images' activeClassName={s.activeLink}>Images</NavLink>
+                </div>
+                <div className={s.item}>
                     <a href='/news' activeClassName={s.activeLink}>news</a>
                 </div>
                 <div className={s.item}>
@@ -22,9 +25,6 @@ const UserContentProfile = (props) => {
                 </div>
                 <div className={s.item}>
                     <a href='/videos' activeClassName={s.activeLink}>videos</a>
-                </div>
-                <div className={s.item}>
-                    <a href='/images' activeClassName={s.activeLink}>images</a>
                 </div>
                 <div className={s.item}>
                     <a href='/settings' activeClassName={s.activeLink}>settings</a>

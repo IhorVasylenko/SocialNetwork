@@ -19,7 +19,7 @@
 
 .content {
   display: grid;
-  grid-template-columns: 25% 55% 20%;
+  grid-template-columns: 25% 75%;
 
   width: 1050px;
   max-width: 1050px;

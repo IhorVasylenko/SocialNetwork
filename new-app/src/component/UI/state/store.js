@@ -1,12 +1,13 @@
+/*
 import React from "react";
 import postReducer from "./postReducer";
 import messageReducer from "./messageReducer";
 
-/*const ADD_POST = 'ADD-POST';
+/!*const ADD_POST = 'ADD-POST';
 const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
 const ADD_NEW_COMMENT = 'ADD-NEW-COMMENT';
 const UPDATE_NEW_COMMENT_TEXT = 'UPDATE-NEW-COMMENT-TEXT';
-const ADD_NEW_MESSAGE = 'ADD-NEW-MESSAGE';*/
+const ADD_NEW_MESSAGE = 'ADD-NEW-MESSAGE';*!/
 
 let store = {
     _state: {
@@ -93,7 +94,7 @@ let store = {
         this._callSubscriber = observer;
     },
 
-    /*addNewPost() {
+    /!*addNewPost() {
         let newPost = {
             id: 4,
             name: 'Lúthien Tinuviel',
@@ -136,7 +137,7 @@ let store = {
         };
         this._state.messagesPage.myMessagesData.push(newMessage);
         this._callSubscriber(this._state);
-    },*/
+    },*!/
     dispatch(action) {
 
         this._state.postsPage = postReducer(this._state.postsPage, action);
@@ -144,7 +145,7 @@ let store = {
 
         this._callSubscriber(this._state);
 
-        /*if (action.type === 'ADD-POST') {
+        /!*if (action.type === 'ADD-POST') {
             let newPost = {
                 id: 4,
                 name: 'Lúthien Tinuviel',
@@ -183,12 +184,12 @@ let store = {
             };
             this._state.messagesPage.myMessagesData.push(newMessage);
             this._callSubscriber(this._state);
-        }*/
+        }*!/
     }
 
 }
 
-/*export const addPostActionCreator = () => {
+/!*export const addPostActionCreator = () => {
     return {
         type: ADD_POST
     }
@@ -219,7 +220,7 @@ export const addNewMessage = (text) => {
         type: ADD_NEW_MESSAGE,
         messageData: text
     }
-}*/
+}*!/
 
 export default store
-window.store = store
+window.store = store*/
