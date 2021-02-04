@@ -15,10 +15,7 @@ const UserContentProfile = (props) => {
                     <NavLink to='/images' activeClassName={s.activeLink}>Images</NavLink>
                 </div>
                 <div className={s.item}>
-                    <a href='/news' activeClassName={s.activeLink}>news</a>
-                </div>
-                <div className={s.item}>
-                    <a href='/projects' activeClassName={s.activeLink}>projects</a>
+                    <NavLink to='/addFriends' activeClassName={s.activeLink}>AddFriends</NavLink>
                 </div>
                 <div className={s.item}>
                     <a href='/music' activeClassName={s.activeLink}>music</a>

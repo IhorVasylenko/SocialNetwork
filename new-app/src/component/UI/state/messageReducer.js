@@ -1,5 +1,5 @@
-
 const ADD_NEW_MESSAGE = 'ADD-NEW-MESSAGE';
+const UPDATE_NEW_MESSAGE_TEXT = 'UPDATE-NEW-MESSAGE-TEXT';
 
 let initialState = {
     dialogsData: [
@@ -40,10 +40,12 @@ let initialState = {
         {id: 9, name: 'Yngve', avatar: '/myAvatar.jpg', passed: 'Yesterday', message: 'Do We Leave Middle-Earth To Its Fate? Do We Let Them Stand Alone?'},
         {id: 10, name: 'Lúthien Tinuviel', avatar: '/myAvatar.jpg', passed: '2 days ago', message: 'You Have No Power Here, Servant Of Morgoth! You Are Nameless! Faceless! Formless! Go Back To The\n' +
                 '                    Void From Whence You Came!'}
-    ]
+    ],
+    newMyMessageText: ''
 };
 
 const messageReducer = (state = initialState, action) => {
+
     switch (action.type) {
         case ADD_NEW_MESSAGE:
             let newMessage = {
@@ -51,19 +53,36 @@ const messageReducer = (state = initialState, action) => {
                 name: 'Mirime',
                 avatar: '/myAvatar.jpg',
                 passed: '3 hour ago',
-                message: action.messageData
+                message: state.newMyMessageText
             };
-            state.myMessagesData.push(newMessage);
-            return state;
+            return {
+                ...state,
+                newMyMessageText: '',
+                myMessagesData: [...state.myMessagesData, newMessage]
+            }
+
+        case UPDATE_NEW_MESSAGE_TEXT:
+            return {
+                ...state,
+                newMyMessageText: action.newText
+            }
+
         default:
             return state;
     }
 }
 
-export const addNewMessage = (text) => {
+export const addNewMessageCreator = (text) => {
     return {
         type: ADD_NEW_MESSAGE,
         messageData: text
+    }
+}
+
+export const updateNewMessageTextCreator = (text) => {
+    return {
+        type: UPDATE_NEW_MESSAGE_TEXT,
+        newText: text
     }
 }
 

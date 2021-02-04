@@ -16,7 +16,7 @@ const UserContentWallImages = (props) => {
         props.updateNewImageText(text);
     }
 
-    let imageElement = props.imagesData.map ( i => <UserContentWallImagesItem id={i.id} image={i.image}
+    let imageElement = props.imagesData.map ( i => <UserContentWallImagesItem key={i.id} id={i.id} image={i.image}
         folder={i.folder} url={i.url} informations={i.informations} avatar={i.avatar} name={i.name} /> )
 
     return (

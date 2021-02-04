@@ -5,31 +5,26 @@ import {
     addPostActionCreator, updateCommentActionCreator,
     updateNewPostActionCreator
 } from "../../../../UI/state/postReducer";
+import {connect} from "react-redux";
 
-const UserContentWallMYPostsContainer = (props) => {
-    let state=props.store.getState();
-
-    let addPost = () => {
-        props.store.dispatch( addPostActionCreator() );
-    };
-    let updateNewPost = (text) => {
-        props.store.dispatch( updateNewPostActionCreator(text) );
-    };
-
-    let addComment = () => {
-        props.store.dispatch( addCommentActionCreator() );
+const mapStateToProps = (state) => {
+    return {
+        PostData: state.postPage.PostData,
+        newPostText: state.postPage.newPostText,
+        commentsData: state.postPage.commentsData,
+        newCommentText: state.postPage.newCommentText
     }
-
-    let updateComment = (text) => {
-        props.store.dispatch( updateCommentActionCreator(text) );
-    }
-
-    return (
-        <UserContentWallMYPosts
-            newPostText={state.postPage.newPostText}  addPost={addPost} updateNewPost={updateNewPost}
-            commentsData={state.postPage.commentsData} PostData={state.postPage.PostData} newCommentText={state.postPage.newCommentText}
-            addComment={addComment} updateComment={updateComment} />
-    )
 }
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        addPost: () => {dispatch(addPostActionCreator())},
+        updateNewPost: (text) => {dispatch(updateNewPostActionCreator(text))},
+        addComment: () => {dispatch(addCommentActionCreator())},
+        updateComment: (text) => {dispatch(updateCommentActionCreator(text))}
+    }
+}
+
+const UserContentWallMYPostsContainer = connect (mapStateToProps, mapDispatchToProps) (UserContentWallMYPosts);
 
 export default UserContentWallMYPostsContainer

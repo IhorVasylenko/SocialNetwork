@@ -37,6 +37,7 @@ let initialState = {
 };
 
 const postReducer = (state = initialState, action) => {
+
     switch (action.type) {
         case ADD_POST:
             let newPost = {
@@ -48,12 +49,17 @@ const postReducer = (state = initialState, action) => {
                 text: state.newPostText,
                 media: <img src="https://www.guinnessworldrecords.com/Images/Deadpool%20article%20main_tcm25-19980.jpg" alt=""/>
             };
-            state.PostData.push(newPost);
-            state.newPostText = '';
-            return state;
+            return {
+                ...state,
+                newPostText: '',
+                PostData: [...state.PostData, newPost]
+            }
         case UPDATE_NEW_POST_TEXT:
-            state.newPostText = action.newText;
-            return state;
+            return {
+                ...state,
+                newPostText: action.newText
+            }
+
         case ADD_NEW_COMMENT:
             let newComment = {
                 id: 6,
@@ -61,12 +67,17 @@ const postReducer = (state = initialState, action) => {
                 name: 'Mirime',
                 text: state.newCommentText
             };
-            state.commentsData.push(newComment);
-            state.newCommentText = '';
-            return state;
+            return {
+                ...state,
+                newCommentText: '',
+                commentsData: [...state.commentsData, newComment]
+            }
         case UPDATE_NEW_COMMENT_TEXT:
-            state.newCommentText = action.newText;
-            return state;
+            return {
+                ...state,
+                newCommentText: action.newText
+            }
+
         default:
             return state;
     }

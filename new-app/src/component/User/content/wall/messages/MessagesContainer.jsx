@@ -1,18 +1,24 @@
 import React from "react";
-import {addNewMessage} from "../../../../UI/state/messageReducer";
+import {addNewMessageCreator, updateNewMessageTextCreator} from "../../../../UI/state/messageReducer";
 import UserContentWallMessages from "./Messages";
+import {connect} from "react-redux";
 
-const UserContentWallMessagesContainer = (props) => {
-    let state = props.store.getState();
+const mapStateToProps = (state) => {
+     return {
+         dialogsData: state.messagePage.dialogsData,
+         cntactMessagesData: state.messagePage.cntactMessagesData,
+         myMessagesData: state.messagePage.myMessagesData,
+         newMyMessageText: state.messagePage.newMyMessageText
+     }
+ }
 
-    let addMessage = (text) => {
-        props.store.dispatch( addNewMessage(text) );
-    }
+const mapDispatchToProps = (dispatch) => {
+     return {
+         addMessage: (text) => {dispatch(addNewMessageCreator(text))},
+         updateNewMessageText: (text) => {dispatch(updateNewMessageTextCreator(text))}
+     }
+}
 
-    return (
-        <UserContentWallMessages dialogsData={state.messagePage.dialogsData} cntactMessagesData={state.messagePage.cntactMessagesData}
-            myMessagesData={state.messagePage.myMessagesData} addMessage={addMessage}/>
-    )
-};
+const UserContentWallMessagesContainer = connect (mapStateToProps, mapDispatchToProps) (UserContentWallMessages);
 
 export default UserContentWallMessagesContainer

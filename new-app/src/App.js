@@ -16,7 +16,7 @@ function App(props) {
                 <UserContentProfile />
               </div>
               <div>
-                <UserContentWall state={props.state} dispatch={props.dispatch} store={props.store}/>
+                <UserContentWall />
               </div>
             </div>
             <UserFooter />
@@ -26,3 +26,6 @@ function App(props) {
 }
 
 export default App;
+
+
+/*<UserContentWall state={props.state} dispatch={props.dispatch} store={props.store}/>*/

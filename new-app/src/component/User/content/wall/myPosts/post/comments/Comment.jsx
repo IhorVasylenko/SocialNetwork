@@ -1,5 +1,6 @@
 import React from "react";
 import s from './Comment.module.css';
+import DialogItem from "../../../messages/dialogs/Dialogs";
 
 const CommentsItem = (props) => {
 
@@ -17,7 +18,7 @@ const CommentsItem = (props) => {
 }
 
 const UserContentWallMyPostsPostComment = (props) => {
-    let commentsItemElement = props.commentsData.map(c => <CommentsItem id={c.id} avatar={c.avatar} name={c.name} text={c.text} />)
+    let commentsItemElement = props.commentsData.map(c => <CommentsItem key={c.id} id={c.id} avatar={c.avatar} name={c.name} text={c.text} />)
 
     return (
         <div className={s.wrapper}>

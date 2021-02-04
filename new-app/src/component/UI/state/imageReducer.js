@@ -27,7 +27,8 @@ let initialState = {
     newImageText: ''
 }
 
-const imagesReduser = (state = initialState, action) => {
+const imagesReducer = (state = initialState, action) => {
+
     switch (action.type) {
         case ADD_IMAGE:
             let newImage = {
@@ -39,12 +40,18 @@ const imagesReduser = (state = initialState, action) => {
                 avatar: 'myAvatar.jpg',
                 name: 'Batman'
             };
-            state.imagesData.push(newImage);
-            state.newImageText = '';
-            return state;
+            return {
+                ...state,
+                newImageText: '',
+                imagesData: [...state.imagesData, newImage]
+            }
+
         case UPDATE_NEW_IMAGE_TEXT:
-            state.newImageText = action.newText;
-            return state;
+            return {
+                ...state,
+                newImageText: action.newText
+            }
+
         default:
             return state;
     }
@@ -63,4 +70,4 @@ export const updateNewImageCreator = (text) => {
     }
 }
 
-export default imagesReduser
+export default imagesReducer
