@@ -2,32 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7d3cc10b-d666-446a-887d-eb3507e43ea1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/component/UI/state/addFriendsReducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/component/User/content/addFriends/AddFriendsContainer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/loadingSVG.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/noPhotoAvatar.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/UI/state/imageReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/UI/state/imageReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/UI/state/messageReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/UI/state/messageReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/UI/state/postReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/UI/state/postReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/UI/state/reduxStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/UI/state/reduxStore.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/User/content/images/Images.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/User/content/images/Images.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/User/content/images/ImagesContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/User/content/images/ImagesContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/User/content/news/News.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/User/content/addFriends/AddFriends.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/User/content/news/News.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/User/content/addFriends/AddFriends.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/User/content/profile/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/User/content/profile/Profile.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/User/content/projects/Projects.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/User/content/projects/Projects.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/User/content/wall/Wall.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/User/content/wall/Wall.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/User/content/wall/messages/Messages.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/User/content/wall/messages/Messages.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/User/content/wall/messages/MessagesContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/User/content/wall/messages/MessagesContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/User/content/wall/myPosts/MyPostsContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/User/content/wall/myPosts/MyPostsContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/User/content/wall/myPosts/post/Post.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/User/content/wall/myPosts/post/Post.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/User/content/wall/myPosts/post/comments/Comment.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/User/content/wall/myPosts/post/comments/Comment.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/User/content/wall/wallHeader/WallHeader.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/User/content/wall/wallHeader/WallHeader.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/UI/state/addFriendsReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/UI/state/addFriendsReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/User/content/addFriends/AddFriends.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/User/content/addFriends/AddFriends.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/User/content/addFriends/AddFriends.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/User/content/addFriends/AddFriends.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/User/content/addFriends/AddFriendsContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/User/content/addFriends/AddFriendsContainer.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,6 +55,7 @@
     <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
+    <property name="ts.external.directory.path" value="D:\WebStorm 2020.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -111,6 +96,18 @@
       <workItem from="1612205881448" duration="170000" />
       <workItem from="1612206075267" duration="31750000" />
       <workItem from="1612338623752" duration="32685000" />
+      <workItem from="1612951321184" duration="1445000" />
+      <workItem from="1612954442382" duration="1673000" />
+      <workItem from="1612956266759" duration="1698000" />
+      <workItem from="1612958216944" duration="1887000" />
+      <workItem from="1612960279493" duration="1692000" />
+      <workItem from="1612963826828" duration="1775000" />
+      <workItem from="1612965751249" duration="1384000" />
+      <workItem from="1613022281331" duration="580000" />
+      <workItem from="1613028706462" duration="709000" />
+      <workItem from="1613029568792" duration="7340000" />
+      <workItem from="1613402432350" duration="21823000" />
+      <workItem from="1613508998591" duration="6807000" />
     </task>
     <servers />
   </component>
