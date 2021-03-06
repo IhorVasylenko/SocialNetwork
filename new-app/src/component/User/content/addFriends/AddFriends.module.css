@@ -1,12 +1,84 @@
 .wrapper {
-    height: 700px;
+
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
-.wrapper img {
-    width: 50px;
-    height: 50px;
+.wrapper .container {
+    display: grid;
+    grid-template-columns: 106px 1fr;
+    width: 250px;
+    height: 145px;
+    margin-top: 5px;
+    margin-right: 5px;
+    border-radius: 10px;
+    transition: background-color linear 0.3s;
+    border: 2px solid #757575;
+}
+
+.wrapper .container:hover {
+    background-color: #757575;
+    transition: background-color linear 0.3s;
+}
+
+.wrapper .container .profileAvatar {
+    margin: 3px;
+}
+
+.wrapper .container .profileAvatar img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.wrapper .container .buttonFollow button{
+    margin-left: 3px;
+    width: 100px;
+    height: 21px;
+
+    border-radius: 7px;
+    border: none;
+
+    color: #212121;
+    text-transform: uppercase;
+    background-color: #bdbdbd;
+    font-size: 12px;
+
+    font-family: "Fira Code", sans-serif;
+}
+
+.wrapper .container .textArea {
+    padding: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.wrapper .container .textArea .profileName {
+    color: #cfd8dc;
+    text-transform: uppercase;
+    font-family: "Fira Code", sans-serif;
+    font-weight: bold;
+
+}
+
+.wrapper .container .textArea .profileStatus {
+    color: #455A64;
+    font-family: "Fira Code", sans-serif;
 }
 
 .selectedPage {
     font-weight: bold;
+}
+
+.wrapper .pagenation {
+    height: 35px;
+    width: 300px;
+    overflow: hidden;
+    font-size: 16px;
+    color: #212121;
+
 }

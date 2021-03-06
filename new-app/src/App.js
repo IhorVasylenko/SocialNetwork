@@ -1,7 +1,7 @@
 import React from "react";
 import './App.css';
 import UserHeader from "./component/User/header/Header";
-import UserContentProfile from "./component/User/content/profile/Profile";
+import UserContentMenu from "./component/User/content/menu/Menu";
 import UserContentWall from "./component/User/content/wall/Wall";
 import UserFooter from "./component/User/footer/Footer";
 
@@ -13,7 +13,7 @@ function App(props) {
             <UserHeader />
             <div className='content'>
               <div>
-                <UserContentProfile />
+                <UserContentMenu />
               </div>
               <div>
                 <UserContentWall />

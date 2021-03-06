@@ -6,6 +6,7 @@ import {
 } from "../../../UI/state/addFriendsReducer";
 import * as axios from "axios";
 import UserContentAddFriends from "./AddFriends";
+import PreLoader from "../../../common/preLoader/preLoader.jsx";
 
 class UserContentAddFriendsContainer extends React.Component {
 
@@ -31,7 +32,8 @@ class UserContentAddFriendsContainer extends React.Component {
 
     render() {
         return <>
-            {this.props.isFetching ? <img src={'loadingSVG.svg'} alt={''}/> : null }
+            {this.props.isFetching ?
+                <PreLoader /> : null }
             <UserContentAddFriends totalUsersCount={this.props.totalUsersCount} pageSize={this.props.pageSize}
                                    currentPage={this.props.currentPage} onPageChanged={this.onPageChanged}
                                    usersData={this.props.usersData} unfollow={this.props.unfollow}

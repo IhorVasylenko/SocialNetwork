@@ -5,6 +5,7 @@ import UserContentWallImagesContainer from "../images/ImagesContainer";
 import UserContentWallMessagesContainer from "./messages/MessagesContainer";
 import UserContentWallMYPostsContainer from "./myPosts/MyPostsContainer";
 import UserContentAddFriendsContainer from "../addFriends/AddFriendsContainer";
+import UserContentProfileContainer from "../profile/ProfileContainer";
 
 const UserContentWall = (props) => {
     return (
@@ -13,6 +14,7 @@ const UserContentWall = (props) => {
                     <Route path='/messages' render={ () => <UserContentWallMessagesContainer /> } />
                     <Route path='/images' render={ () => <UserContentWallImagesContainer /> } />
                     <Route path='/addFriends' render={ () => <UserContentAddFriendsContainer /> } />
+                    <Route path='/profile/:userId?' render={ () => <UserContentProfileContainer /> } />
             </div>
     )
 }
