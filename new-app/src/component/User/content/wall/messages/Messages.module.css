@@ -93,14 +93,13 @@
 }
 
 .addMessageWrapper .formControl {
-    height: 36px;
+    height: 34px;
     width: 365px;
     font-size: 16px;
     font-style: italic;
     font-weight: bold;
     background-color: #cfd8dc;
     color: #455A64;
-    border: none;
     padding-left: 15px;
     outline: none;
     resize: none;

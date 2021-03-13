@@ -1,30 +1,18 @@
 import React from "react";
 import UserContentWallMYPosts from "./MyPosts";
-import {
-    addCommentActionCreator,
-    addPostActionCreator, updateCommentActionCreator,
-    updateNewPostActionCreator
-} from "../../../../UI/state/postReducer";
+import {addComment, addPost} from "../../../../UI/state/postReducer";
 import {connect} from "react-redux";
+import {compose} from "redux";
+import {withAuthRedirect} from "../../../../HOC/withAuthRedirect";
 
 const mapStateToProps = (state) => {
     return {
         PostData: state.postPage.PostData,
-        newPostText: state.postPage.newPostText,
-        commentsData: state.postPage.commentsData,
-        newCommentText: state.postPage.newCommentText
+        commentsData: state.postPage.commentsData
     }
 }
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-        addPost: () => {dispatch(addPostActionCreator())},
-        updateNewPost: (text) => {dispatch(updateNewPostActionCreator(text))},
-        addComment: () => {dispatch(addCommentActionCreator())},
-        updateComment: (text) => {dispatch(updateCommentActionCreator(text))}
-    }
-}
-
-const UserContentWallMYPostsContainer = connect (mapStateToProps, mapDispatchToProps) (UserContentWallMYPosts);
-
-export default UserContentWallMYPostsContainer
+export default compose (
+    connect (mapStateToProps, {addPost, addComment}),
+    withAuthRedirect
+) (UserContentWallMYPosts)

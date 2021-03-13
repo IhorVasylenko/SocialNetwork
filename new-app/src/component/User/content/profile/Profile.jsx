@@ -2,19 +2,19 @@ import React from "react";
 import s from './Profile.module.css';
 import Follow from "../follow/Follow";
 import PreLoader from "../../../common/preLoader/preLoader";
+import ProfileStatus from "../../../common/status/ProfileStatus";
 
 const UserContentProfile = (props) => {
     if (!props.profile) {
         return <PreLoader />
     }
-
     return (
         <div className={s.wrapper}>
             <div className={s.backgroundImage} style={
                 {backgroundImage: 'url(https://uapo.org.ua/wp-content/uploads/2019/07/year-end-ai.jpg)'}}>
                 <div className={s.profileMenu}>
                     <div className={s.avatarContainer}>
-                        <img src={props.profile.photos.small != null ? props.profile.photos.small : 'noPhotoAvatar.png'} alt=""/>
+                        <img src={props.profile.photos.small != null ? props.profile.photos.small : '/noPhotoAvatar.png'} alt=""/>
                     </div>
                     <div className={s.placeHolders}>
                         <a href='#'>news</a>
@@ -69,11 +69,9 @@ const UserContentProfile = (props) => {
                             <span>Ukraine</span>
                             <span>Kiev</span>
                         </span>
-                        <span className={s.status}>{props.profile.aboutMe != null ? props.profile.aboutMe :
-                            'Load up on guns and bring your friends.\n' +
-                            'It\'s fun to lose and to pretend.\n' +
-                            'She\'s over-bored and self-assured.\n' +
-                            'Oh no, I know a dirty word.'}</span>
+                        <span className={s.status}>
+                            <ProfileStatus status={props.status} updateStatus={props.updateStatus}/>
+                        </span>
                     </div>
                 </div>
             </div>

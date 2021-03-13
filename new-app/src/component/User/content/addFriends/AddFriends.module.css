@@ -70,13 +70,13 @@
     font-family: "Fira Code", sans-serif;
 }
 
-.selectedPage {
+.wrapper .pagenation .selectedPage {
     font-weight: bold;
 }
 
 .wrapper .pagenation {
     height: 35px;
-    width: 300px;
+    width: 500px;
     overflow: hidden;
     font-size: 16px;
     color: #212121;

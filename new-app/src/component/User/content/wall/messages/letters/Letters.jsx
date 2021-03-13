@@ -24,7 +24,7 @@ const ContactMessages = (props) => {
 const MyMessages = (props) => {
 
     return <div className={s.myMessages}>
-        <img src={process.env.PUBLIC_URL + props.avatar} alt=""/>
+        <img src={props.avatar !== 0 ? props.avatar : '/noPhotoAvatar.png'} alt=""/>
         <div className={s.message}>
             <div className={s.header}>
                 <div className={s.name}>

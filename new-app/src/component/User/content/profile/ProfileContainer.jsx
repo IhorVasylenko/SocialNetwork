@@ -2,29 +2,32 @@ import React from "react";
 import s from './Profile.module.css';
 import Follow from "../follow/Follow";
 import UserContentProfile from "./Profile";
-import * as axios from "axios";
 import {connect} from "react-redux";
-import {setUserProfile} from "../../../UI/state/profileReducer";
+import {getStatus, getUserData, updateStatus} from "../../../UI/state/profileReducer";
 import { withRouter } from "react-router-dom";
+import {compose} from "redux";
+import {withAuthRedirect} from "../../../HOC/withAuthRedirect";
 
 class UserContentProfileContainer extends React.Component {
 
     componentDidMount() {
         let userId = this.props.match.params.userId;
         if (!userId) {
-            userId = 2;
+            userId = this.props.authorizedUserId;
+            if (!userId) {
+                this.props.history.push('/login')
+            }
         }
+        this.props.getUserData(userId);
+        this.props.getStatus(userId);
 
-        axios.get(`https://social-network.samuraijs.com/api/1.0/profile/` + userId )
-            .then(response => {
-                this.props.setUserProfile(response.data);
-            });
     }
 
     render () {
         return (
             <div className={s.wrapper}>
-                <UserContentProfile {...this.props} profile={this.props.profile}/>
+                <UserContentProfile {...this.props} profile={this.props.profile}
+                                    status={this.props.status} updateStatus={this.props.updateStatus}/>
                 <Follow />
             </div>
         )
@@ -32,10 +35,12 @@ class UserContentProfileContainer extends React.Component {
 }
 
 let mapStateToProps = (state) => ({
-    profile: state.profilePage.profile
+    profile: state.profilePage.profile,
+    status: state.profilePage.status,
+    authorizedUserId: state.auth.id,
+    isAuth: state.auth.isAuth
 });
 
-
-let WithUrlDataContainerComponent = withRouter (UserContentProfileContainer);
-
-export default connect (mapStateToProps, {setUserProfile}) (WithUrlDataContainerComponent);
+export default compose(
+    connect (mapStateToProps, {getUserData, getStatus, updateStatus}), withRouter)
+(UserContentProfileContainer)

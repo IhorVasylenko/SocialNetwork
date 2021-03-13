@@ -1,6 +1,5 @@
 import React from "react";
 import s from './Comment.module.css';
-import DialogItem from "../../../messages/dialogs/Dialogs";
 
 const CommentsItem = (props) => {
 

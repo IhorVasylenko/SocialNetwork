@@ -1,24 +1,17 @@
 import React from "react";
-import {addNewMessageCreator, updateNewMessageTextCreator} from "../../../../UI/state/messageReducer";
+import {addNewMessage} from "../../../../UI/state/messageReducer";
 import UserContentWallMessages from "./Messages";
 import {connect} from "react-redux";
+import {compose} from "redux";
+import {withAuthRedirect} from "../../../../HOC/withAuthRedirect";
 
 const mapStateToProps = (state) => {
      return {
          dialogsData: state.messagePage.dialogsData,
          cntactMessagesData: state.messagePage.cntactMessagesData,
-         myMessagesData: state.messagePage.myMessagesData,
-         newMyMessageText: state.messagePage.newMyMessageText
+         myMessagesData: state.messagePage.myMessagesData
      }
  }
 
-const mapDispatchToProps = (dispatch) => {
-     return {
-         addMessage: (text) => {dispatch(addNewMessageCreator(text))},
-         updateNewMessageText: (text) => {dispatch(updateNewMessageTextCreator(text))}
-     }
-}
-
-const UserContentWallMessagesContainer = connect (mapStateToProps, mapDispatchToProps) (UserContentWallMessages);
-
-export default UserContentWallMessagesContainer
+export default compose(
+    connect (mapStateToProps, {addNewMessage}),withAuthRedirect) (UserContentWallMessages)

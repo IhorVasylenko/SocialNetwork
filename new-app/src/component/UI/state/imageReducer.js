@@ -1,5 +1,4 @@
 const ADD_IMAGE = 'ADD-IMAGE'
-const UPDATE_NEW_IMAGE_TEXT = 'UPDATE-NEW-IMAGE-TEXT'
 
 let initialState = {
     imagesData: [
@@ -23,8 +22,7 @@ let initialState = {
             url: 'twitter.com',informations: 'My fourth download image.', avatar: 'avatar4.jpg',name: 'IronMan' },
         {id: 10, image: 'https://res.cloudinary.com/jerrick/image/upload/c_scale,q_auto/kqrzaqmuxsuryayi3mpg.jpg',folder: 'Saturn',
             url: 'instagram.com',informations: 'My fifth download image.', avatar: 'avatar5.jpg',name: 'Spider-Man' }
-    ],
-    newImageText: ''
+    ]
 }
 
 const imagesReducer = (state = initialState, action) => {
@@ -36,20 +34,13 @@ const imagesReducer = (state = initialState, action) => {
                 image: 'https://www.tvovermind.com/wp-content/uploads/2019/07/Marvel-vs.-DC.jpg',
                 folder: 'Mars',
                 url: 'pinterest.com',
-                informations: state.newImageText,
+                informations: action.newImagesText,
                 avatar: 'myAvatar.jpg',
                 name: 'Batman'
             };
             return {
                 ...state,
-                newImageText: '',
                 imagesData: [...state.imagesData, newImage]
-            }
-
-        case UPDATE_NEW_IMAGE_TEXT:
-            return {
-                ...state,
-                newImageText: action.newText
             }
 
         default:
@@ -57,16 +48,10 @@ const imagesReducer = (state = initialState, action) => {
     }
 }
 
-export const addImageCreator = () => {
+export const addImage = (newImagesText) => {
     return {
-        type: ADD_IMAGE
-    }
-}
-
-export const updateNewImageCreator = (text) => {
-    return {
-        type: UPDATE_NEW_IMAGE_TEXT,
-        newText: text
+        type: ADD_IMAGE,
+        newImagesText
     }
 }
 

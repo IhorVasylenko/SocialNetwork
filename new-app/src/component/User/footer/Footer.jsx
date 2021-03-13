@@ -1,6 +1,6 @@
 import React from "react";
 import s from './Footer.module.css';
-import LogoGoToIt from "../../UI/logoIT/LogoGoToIt";
+import LogoGoToIt from "../../common/logoIT/LogoGoToIt";
 
 const UserFooter = (props) => {
     return (

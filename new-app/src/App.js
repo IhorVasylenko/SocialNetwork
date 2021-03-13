@@ -1,31 +1,48 @@
 import React from "react";
 import './App.css';
-import UserHeader from "./component/User/header/Header";
 import UserContentMenu from "./component/User/content/menu/Menu";
 import UserContentWall from "./component/User/content/wall/Wall";
 import UserFooter from "./component/User/footer/Footer";
+import {connect} from "react-redux";
+import UserHeaderContainer from "./component/User/header/HeaderContainer";
+import {withRouter} from "react-router-dom";
+import {compose} from "redux";
+import {initializeAPP} from "./component/UI/state/appReducer";
+import PreLoader from "./component/common/preLoader/preLoader";
 
-function App(props) {
+class App extends React.Component {
+    componentDidMount() {
+        this.props.initializeAPP()
+    }
 
-  return (
-        <div className='pageContents'>
-          <div className='appWrapper'>
-            <UserHeader />
-            <div className='content'>
-              <div>
-                <UserContentMenu />
-              </div>
-              <div>
-                <UserContentWall />
-              </div>
+    render() {
+        if (!this.props.initialized) {
+            return <PreLoader />
+        }
+
+        return (
+            <div className='pageContents'>
+                <div className='appWrapper'>
+                    <UserHeaderContainer/>
+                    <div className='content'>
+                        <div>
+                            <UserContentMenu/>
+                        </div>
+                        <div>
+                            <UserContentWall/>
+                        </div>
+                    </div>
+                    <UserFooter/>
+                </div>
             </div>
-            <UserFooter />
-          </div>
-        </div>
-  );
+        )
+    }
 }
 
-export default App;
+const mapStateToProps = (state) => ({
+    initialized: state.app.initialized
+})
 
-
-/*<UserContentWall state={props.state} dispatch={props.dispatch} store={props.store}/>*/
+export default compose (
+    withRouter,
+    connect (mapStateToProps, {initializeAPP})) (App)

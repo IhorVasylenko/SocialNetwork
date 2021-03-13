@@ -17,11 +17,13 @@
     resize: none;
     height: 40px;
     border-radius: 20px;
-    padding-left: 10px;
-
     background-color: #cfd8dc;
     font-family: "Fira Code", sans-serif;
     color: #465A64;
+    text-align: start;
+
+    padding: 0 0 0 10px;
+    border: none;
 }
 
 .header textarea::placeholder {

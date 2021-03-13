@@ -1,17 +1,13 @@
 import React from "react";
 import s from './PostElement.module.css';
 import UserContentWallMyPostsPostComment from "../comments/Comment";
+import {Field, reduxForm} from "redux-form";
+import {maxLengthCreator, required} from "../../../../../utils/validators/validators";
+import {Textarea} from "../../../../../../common/formsControl/FormsControl";
 
 const PostItem = (props) => {
-    let newComment = React.createRef();
-
-    let onAddComment = () => {
-        props.addComment();
-    }
-
-    let onCommentChange = () => {
-        let text = newComment.current.value;
-        props.updateComment(text);
+    let addNewComment = (values) => {
+        props.addComment(values.newCommentText)
     }
 
     return <div className={s.post}>
@@ -41,13 +37,23 @@ const PostItem = (props) => {
             {props.text}
         </div>
         <UserContentWallMyPostsPostComment commentsData={props.commentsData} />
-        <div className={s.addMyComent}>
-            <img src={process.env.PUBLIC_URL + "./myAvatar.jpg"} alt=""/>
-            <textarea name="" ref={newComment} id="" cols="30" rows="10" onChange={onCommentChange} value={props.newCommentText} placeholder="Add comment..." />
-            <button onClick={onAddComment}>Add</button>
-        </div>
+        <CommentReduxForm onSubmit={addNewComment}/>
     </div>
 }
+
+const maxLength10 = maxLengthCreator(10);
+
+const CommentForm = (props) => {
+    return (
+        <form className={s.addMyComent} onSubmit={props.handleSubmit}>
+            <img src={process.env.PUBLIC_URL + "./myAvatar.jpg"} alt=""/>
+            <Field name={'newCommentText'} component={Textarea} placeholder={'Add comment...'} validate={[required, maxLength10]} />
+            <button>Add</button>
+        </form>
+    )
+}
+
+const CommentReduxForm = reduxForm({form: 'newCommentForm'}) (CommentForm)
 
 const MediaItem = (props) => {
     return <div className={s.addedMedia}>

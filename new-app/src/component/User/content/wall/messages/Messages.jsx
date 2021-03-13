@@ -2,6 +2,9 @@ import React from "react";
 import s from './Messages.module.css';
 import DialogItem from './dialogs/Dialogs';
 import {ContactMessages, MyMessages} from "./letters/Letters";
+import {Field, reduxForm} from "redux-form";
+import {required, maxLengthCreator} from "../../../utils/validators/validators";
+import {Textarea} from "../../../../common/formsControl/FormsControl";
 
 const UserContentWallMessages = (props) => {
 
@@ -14,15 +17,8 @@ const UserContentWallMessages = (props) => {
     let myMessagesElements = props.myMessagesData.map(m =>
         <MyMessages key={m.id} id={m.id} name={m.name} avatar={m.avatar} passed={m.passed} message={m.message}/>);
 
-    let newMessage = React.createRef ();
-
-    let onAddMessage = () => {
-        props.addMessage();
-    }
-
-    let onMessageChange = () => {
-        let text = newMessage.current.value;
-        props.updateNewMessageText(text);
+    let addNewMessage = (value) => {
+        props.addNewMessage(value.newMessageText)
     }
 
     return (
@@ -38,13 +34,23 @@ const UserContentWallMessages = (props) => {
                     {myMessagesElements}
                 </div>
             </div>
-            <div className={s.addMessageWrapper}>
-                <button onClick={onAddMessage}>Add message</button>
-                <textarea className={s.formControl} ref={newMessage} value={props.newMyMessageText}
-                          onChange={onMessageChange} placeholder={'What do you want to write?'} />
-            </div>
+            <MessageReduxForm onSubmit={addNewMessage} />
         </div>
     )
 }
+
+const maxLength10 = maxLengthCreator(10);
+
+const MessageForm = (props) => {
+    return (
+        <form className={s.addMessageWrapper} onSubmit={props.handleSubmit}>
+            <button>Add message</button>
+            <Field className={s.formControl} name={'newMessageText'} component={Textarea}
+                   placeholder={'What do you want to write?'} validate={[required, maxLength10]} />
+        </form>
+    )
+}
+
+const MessageReduxForm = reduxForm ({form: 'newMessageForm'}) (MessageForm)
 
 export default UserContentWallMessages
