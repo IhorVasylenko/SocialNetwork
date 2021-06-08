@@ -1,0 +1,102 @@
+.contactMessages {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-right: 4px;
+}
+
+.contactMessages img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 4px;
+    margin-left: 6px;
+}
+
+.contactMessages .message {
+    background-color: #757575;
+    border-radius: 15px;
+
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.contactMessages .message .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    border-bottom: 1px solid #465A64;
+}
+
+.contactMessages .message .header .name {
+    font-weight: bolder;
+    font-size: 14px;
+    font-family: "Fira Code", sans-serif;
+}
+
+.contactMessages .message .header .passed {
+    font-size: 10px;
+    font-family: "Fira Code", sans-serif;
+    color: #cfd8dc;
+}
+
+.contactMessages .message .text {
+    font-style: italic;
+    font-size: 12px;
+    font-family: "Fira Code", sans-serif;
+    color: #bdbdbd;
+}
+
+
+.myMessages {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 4px;
+}
+
+.myMessages img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-left: 4px;
+    margin-right: 6px;
+}
+
+.myMessages .message {
+    background-color: #bdbdbd;
+    border-radius: 15px;
+
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.myMessages .message .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    border-bottom: 1px solid #465A64;
+}
+
+.myMessages .message .header .name {
+    font-weight: bolder;
+    font-size: 14px;
+    font-family: "Fira Code", sans-serif;
+}
+
+.myMessages .message .header .passed {
+    font-size: 10px;
+    font-family: "Fira Code", sans-serif;
+    color: #607D8B;
+}
+
+.myMessages .message .text {
+    font-style: italic;
+    font-size: 12px;
+    font-family: "Fira Code", sans-serif;
+    color: #757575;
+}

@@ -1,0 +1,131 @@
+/*Общий контейнер*/
+.wrapper {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 435px 50px;
+    grid-template-areas: 'd m' 'd a' ;
+
+    background-color: #CFD8DC;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+/*Стили для контактов*/
+.wrapper .dialogsWrapper {
+    grid-area: d;
+    width: 100%;
+    height: 475px;
+    border-top: 5px solid #CFD8DC;
+
+
+    overflow-y: scroll;
+}
+
+.wrapper .dialogsWrapper::-webkit-scrollbar {
+    width: 8px;
+}
+.wrapper .dialogsWrapper::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px #cfd8dc;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.wrapper .dialogsWrapper::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #bdbdbd;
+    -webkit-box-shadow: inset 0 0 6px #757575;
+}
+.wrapper .dialogsWrapper::-webkit-scrollbar-thumb:window-inactive {
+    background: #cfd8dc;
+}
+
+.wrapper .dialogsWrapper .dialogs {
+    height: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 0;
+    padding: 0;
+}
+
+/*Стили для сообщений*/
+.wrapper .scrollWrapper {
+    padding-right: 2px;
+}
+
+.wrapper .scrollWrapper .messagesWrapper {
+    grid-area: m;
+    width: 100%;
+    border: none;
+    height: 425px;
+    border-top: 5px solid #CFD8DC;
+    overflow-y: scroll;
+}
+
+.wrapper .scrollWrapper .messagesWrapper::-webkit-scrollbar {
+    width: 8px;
+}
+.wrapper .scrollWrapper .messagesWrapper::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px #cfd8dc;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.wrapper .scrollWrapper .messagesWrapper::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #bdbdbd;
+    -webkit-box-shadow: inset 0 0 6px #757575;
+}
+.wrapper .scrollWrapper .messagesWrapper::-webkit-scrollbar-thumb:window-inactive {
+    background: #cfd8dc;
+}
+
+/*Стиль для нового сообщения*/
+.addMessageWrapper {
+    background-color: #607D8B;
+    grid-area: a;
+    display: flex;
+    flex-direction: row-reverse;
+    border-top: 10px solid #607D8B;
+}
+
+.addMessageWrapper .formControl {
+    height: 34px;
+    width: 365px;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: bold;
+    background-color: #cfd8dc;
+    color: #455A64;
+    padding-left: 15px;
+    outline: none;
+    resize: none;
+}
+
+textarea::placeholder {
+    color: #607D8B;
+    font-weight: normal;
+}
+
+.addMessageWrapper button {
+    width: 80px;
+    height: 40px;
+    border-bottom-right-radius: 10px;
+    border: none;
+
+    color: #cfd8dc;
+    background-color: #465A64;
+    font-size: 14px;
+
+    font-family: "Fira Code", sans-serif;
+}
+.addMessageWrapper button:active {
+    font-weight: bold;
+}
+
+.addMessageWrapper button:active, button:focus {
+    outline: none;
+}

@@ -1,0 +1,93 @@
+.dialog {
+    width: 100%;
+    float: left;
+    position: relative;
+    display: block;
+}
+
+.dialog a {
+    outline: none;
+    text-decoration: none;
+}
+
+.dialog a, a:active, a:focus {
+    outline: none;
+}
+
+.dialog .contact {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+
+    border-bottom: 2px solid #607D8B;
+    margin-left: 10px;
+    margin-right: 1px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+
+.dialog .contact:hover {
+    border-bottom: 2px solid #455A64;
+}
+
+.dialog .contact img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.dialog .contact .preview {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:'p p' ' sm se';
+
+    margin-left: 10px;
+}
+
+.dialog .contact small {
+    grid-area: sm;
+    font-size: 10px;
+    font-family: "Fira Code", sans-serif;
+    color: #757575;
+    justify-self: end;
+}
+
+.dialog .contact p {
+    grid-area: p;
+
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+
+    font-size: 16px;
+    color: #212121;
+    font-weight: bold;
+    font-family: "Fira Code", sans-serif;
+}
+
+.dialog .contact .seen {
+    grid-area: se;
+    justify-self: end;
+}
+
+.dialog .contact .seen span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 15px;
+    height: 15px;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: "Fira Code", sans-serif;
+    color: #CFD8DC;
+    background-color: #455A64;
+    border-radius: 5px;
+}
+
+.dialog .contact .seen img {
+    width: 15px;
+    height: 15px;
+    background-color: #CFD8DC;
+}

@@ -1,0 +1,11 @@
+.wrapper {
+    position: relative;
+    display: grid;
+    grid-template-columns: 577.5px 1fr;
+    grid-template-rows: 110px 1fr;
+}
+
+.follow {
+    grid-column: 2;
+    grid-row: 1 / 3;
+}

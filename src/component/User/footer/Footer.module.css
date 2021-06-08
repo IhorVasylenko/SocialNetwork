@@ -1,0 +1,86 @@
+.footer {
+    position: relative;
+}
+
+.footer::before {
+    content: "";
+    background: linear-gradient(to right, #607D8B 0%,#455A64 50%,#607D8B 100%);
+    height: 5px;
+    width: 100%;
+    position: absolute;
+}
+
+.footer .wrapper {
+    display: grid;
+    grid-template-columns: 23% 18% 18% 18% 23%;
+    justify-items: center;
+    align-items: start;
+
+    min-height: 100%;
+    padding-bottom: 40px;
+
+    max-width: 1050px;
+    padding-left: -10px;
+    padding-right: -10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer .wrapper .icons img {
+    width: 20px;
+    margin-right: 15px;
+}
+
+.footer .wrapper p {
+    color: #212121;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.footer .wrapper li::marker {
+    color: #212121;
+}
+
+.footer .wrapper li a {
+    text-decoration: none;
+    color: #BDBDBD;
+}
+
+.footer .wrapper li a:hover {
+    color: #212121;
+}
+
+.footer .wrapper .contacts {
+    font-size: 16px;
+    font-weight: bold;
+    color: #BDBDBD;
+}
+
+.footer .wrapper .contacts li {
+    border-bottom: 1px #212121 solid;
+    height: 2em;
+    margin-top: 10px;
+}
+
+.footer .wrapper .contacts li::marker {
+    color: transparent;
+}
+
+.footer .wrapper .contacts img {
+    width: 15px;
+    margin-right: 15px;
+}
+
+.footer .copyright {
+    position: relative;
+    height: 30px;
+
+    margin-right: -10px;
+    margin-left: -10px;
+    background: #455A64;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 0;
+    text-align: center;
+}

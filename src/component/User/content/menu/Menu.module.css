@@ -1,0 +1,27 @@
+.item a {
+    color: #bdbdbd;
+
+    font-family: "Fira Code", sans-serif;
+    font-style: oblique;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+
+    text-transform: uppercase;
+}
+
+/*Изменения стиля при наводе курсора мышки*/
+.item a:hover {
+    margin-left: 10px;
+
+    transition: margin-left 0.3s;
+}
+
+/*Стиль для активного пункта меню.*/
+.item a.activeLink {
+    color: #212121;
+
+    margin-left: 10px;
+
+    -webkit-text-stroke: 0.1px black;
+}

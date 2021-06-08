@@ -1,0 +1,199 @@
+.wrapper {
+    position: relative;
+    display: grid;
+    grid-template-columns: 577px 1fr;
+
+    height: 497px;
+}
+
+
+
+.wrapper .backgroundImage {
+    position: relative;
+    display: grid;
+    grid-template-rows: 297px 200px;
+
+    height: 297px;
+    background-size: cover;
+    background-position: center;
+
+    margin-top: 5px;
+    margin-bottom: 10px;
+
+}
+
+.wrapper .backgroundImage .profileMenu {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: rgba(21,21,21,0.7);
+    background-blend-mode: lighten;
+    height: 50px;
+    margin-top: 220px;
+    padding-right: 5px;
+}
+
+.wrapper .backgroundImage .profileMenu .avatarContainer {
+    position: relative;
+    margin-top: -10px;
+    margin-left: 20px;
+}
+
+.wrapper .backgroundImage .profileMenu .avatarContainer img {
+    width: 155px;
+    height: 155px;
+    border-radius: 50%;
+    border: 3px solid #cfd8dc;
+    background-color: #cfd8dc;
+}
+
+.wrapper .backgroundImage .profileMenu a {
+    color: #757575;
+    text-decoration: none;
+    padding: 5px 5px;
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-family: "Fira Code", sans-serif;
+}
+
+.wrapper .backgroundImage .profileMenu a:hover {
+    color: #cfd8dc;
+}
+
+.wrapper .backgroundImage .profileMenu button {
+    width: 100px;
+    height: 21px;
+
+    border-radius: 7px;
+    border: none;
+
+    color: #cfd8dc;
+    text-transform: uppercase;
+    background-color: #757575;
+    font-size: 14px;
+
+    font-family: "Fira Code", sans-serif;;
+}
+
+.wrapper .backgroundImage .profileMenu button:active {
+    font-weight: bold;
+}
+
+
+.wrapper .backgroundImage .footer {
+    display: grid;
+    grid-template-columns: 201px 1fr;
+}
+
+.wrapper .backgroundImage .footer .preferencesDate {
+    background-color: #cfd8dc;
+    margin-bottom: 10px;
+
+    display: grid;
+    grid-template-rows: 70px 1fr;
+}
+
+.wrapper .backgroundImage .footer .preferencesDate .followerDate {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 18px;
+
+}
+
+.wrapper .backgroundImage .footer .preferencesDate .followerDate .followerItem  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-transform: uppercase;
+    color: #607D8B;
+    font-size: 12px;
+    font-weight: bold;
+
+    font-family: "Fira Code", sans-serif;;
+}
+
+.wrapper .backgroundImage .footer .preferencesDate .followerDate .followerItem .value {
+    color: #455A64;
+    font-size: 16px;
+}
+
+.wrapper .backgroundImage .footer .preferencesDate .socialsDate {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 116px;
+    overflow-y: scroll;
+}
+
+.wrapper .backgroundImage .footer .preferencesDate .socialsDate a {
+    text-decoration: none;
+    border-top: 1px solid #757575;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    padding-top: 5px;
+}
+
+.wrapper .backgroundImage .footer .preferencesDate .socialsDate a img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.wrapper .backgroundImage .footer .preferencesDate .socialsDate a p {
+    color: #455A64;
+    font-size: 12px;
+    font-weight: bold;
+
+    font-family: "Fira Code", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper .backgroundImage .footer .profileDate {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 30% 70%;
+    grid-template-areas: 'n c' 's s';
+    padding: 5px;
+    justify-items: center;
+}
+
+.wrapper .backgroundImage .footer .profileDate span {
+    font-family: "Fira Code", sans-serif;
+}
+
+.wrapper .backgroundImage .footer .profileDate .profileName {
+    grid-area: n;
+    color: #cfd8dc;
+    font-weight: bold;
+    font-size: 16px;
+    align-self: center;
+    text-transform: uppercase;
+}
+
+.wrapper .backgroundImage .footer .profileDate .country {
+    grid-area: c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #795548;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.wrapper .backgroundImage .footer .profileDate .status {
+    grid-area: s;
+    color: #bdbdbd;
+    align-self: center;
+    font-style: italic;
+}
+
